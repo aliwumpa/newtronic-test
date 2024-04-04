@@ -1,9 +1,25 @@
 import './App.css';
+import { ConfigProvider } from 'antd';
+import MenuComponent from './components/menu/menu';
+
+const myTheme = {
+  token: {
+    // Seed Token
+    colorPrimary: '#00b96b',
+    borderRadius: 2,
+
+    // Alias Token
+    colorBgContainer: '#f6ffed',
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <ConfigProvider theme={myTheme}>
+      <div className="App">
+        <MenuComponent />
+      </div>
+    </ConfigProvider>
   );
 }
 
